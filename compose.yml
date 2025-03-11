@@ -1,0 +1,6 @@
+services:
+  mqtt-influx:
+    image: mqtt-influx:latest
+    restart: unless-stopped
+    env_file:
+      - test.env
