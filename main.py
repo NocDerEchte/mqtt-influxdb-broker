@@ -21,6 +21,7 @@ influx_measurement=os.environ.get("INFLUX_MEASUREMENT")
 connected = False
 connect_try_count = 1
 max_connect_try_count = 3
+wait_before_retry_seconds = 10
 
 def on_connect(client, userdata, flags, reason_code, properties):
   print(f"Connected with result code {reason_code}")
@@ -54,8 +55,8 @@ while not connected:
   except:
     connect_try_count += 1
     print('Failed to connect to mqtt broker')
-    print('Retrying in 10 seconds...')
-    sleep(1)
+    print(f'Retrying in {wait_before_retry_seconds} seconds...')
+    sleep(wait_before_retry_seconds)
 
 influx_client = InfluxDBClient(url=influx_url, token=influx_token, org=influx_org)
 influx_write_api = influx_client.write_api(write_options=SYNCHRONOUS)

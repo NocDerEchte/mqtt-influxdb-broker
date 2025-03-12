@@ -13,7 +13,7 @@ The main purpose was to use this in a school project.
 - working mqtt_broker like mosquitto
 
 
-## Setup:
+## Setup
 
 ### Building the image localy
 
@@ -44,7 +44,7 @@ services:
 ```
 
 Make sure to create a .env file and set the values according to your needs.
-All available variables can be found at [Configuration](##Configuration).
+All available variables can be found at [Configuration](#Configuration).
 
 
 ## Configuration
