@@ -3,4 +3,4 @@ services:
     image: mqtt-influx:latest
     restart: unless-stopped
     env_file:
-      - test.env
+      - path/to/.env/file
