@@ -47,4 +47,4 @@ Make sure to create a .env file and set the values according to your needs.
 
 ## I'd Love Your Feedback!
 
-As I'm currently working through my apprenticeship and this is my first containerized application, I’d greatly appreciate any constructive feedback you have!
+As this is my first containerized application, I’d greatly appreciate any constructive feedback you have!
